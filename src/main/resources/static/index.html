@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>학교데이터</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 페이지가 로딩되자마자 호출되는 함수 -->
+    <script>
+        $('document').ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "/jsonapi/element",
+                data: {},
+                success: function (response) {
+                    //console.log(response);
+                }
+            })
+
+            $.ajax({
+                type: "GET",
+                url: "/jsonapi/middle",
+                data: {},
+                success: function (response) {
+                    //console.log(response);
+                }
+            })
+            $.ajax({
+                type: "GET",
+                url: "/jsonapi/high",
+                data: {},
+                success: function (response) {
+                   // console.log(response);
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+
+</body>
+
+</html>
