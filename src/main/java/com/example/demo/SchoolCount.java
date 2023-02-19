@@ -28,7 +28,8 @@ public class SchoolCount {
                             }
                         }
                     }
-                    System.out.println(str +":"+cnt);
+                    String result = str +":"+cnt;
+                    FileCreate.ResultFIleWrite(result);
                 }
             }
         }catch (IOException e){
@@ -60,7 +61,8 @@ public class SchoolCount {
                             }
                         }
                     }
-                    System.out.println(str +":"+cnt);
+                    String result = str +":"+cnt;
+                    FileCreate.ResultFIleWrite(result);
                 }
             }
         }catch (IOException e){
