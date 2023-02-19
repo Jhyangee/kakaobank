@@ -7,7 +7,7 @@
     <!-- 페이지가 로딩되자마자 호출되는 함수 -->
     <script>
         $('document').ready(function () {
-            $.ajax({
+           $.ajax({
                 type: "GET",
                 url: "/jsonapi/element",
                 data: {},
@@ -15,7 +15,6 @@
                     //console.log(response);
                 }
             })
-
             $.ajax({
                 type: "GET",
                 url: "/jsonapi/middle",
@@ -32,11 +31,19 @@
                    // console.log(response);
                 }
             })
+            $.ajax({
+                type: "GET",
+                url: "/jsonapi/uni",
+                data: {},
+                success: function (response) {
+                    console.log(response);
+                }
+            })
         });
     </script>
 </head>
 <body>
-
+csv 파일에 유효한 학교 데이터를 추출합니다.
 </body>
 
 </html>
