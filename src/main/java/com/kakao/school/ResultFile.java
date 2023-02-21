@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.kakao.school;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,12 +16,12 @@ public class ResultFile {
         try {
 
             logger.info("======파일신규생성시작==========");
-        File file = new File(ResourceUtils.CLASSPATH_URL_PREFIX + "result.text");
+        File file = new File("result.txt");
 
         if (!file.exists()) {
                 file.createNewFile();
         }else{
-            logger.info("기존파일 삭제후 신규파일 생성");
+            logger.info("======기존파일 삭제후 신규파일 생성======");
             file.delete();
             file.createNewFile();
         }
@@ -32,10 +32,10 @@ public class ResultFile {
 
     public static  void ResultFIleWrite(String result) {
         try {
-        File file = new File(ResourceUtils.CLASSPATH_URL_PREFIX + "result.text");
+        File file = new File("result.txt");
         FileWriter fw = new FileWriter(file,true);
         BufferedWriter writer = new BufferedWriter(fw);
-        // 4. 파일에 쓰기
+        //파일쓰기
         writer.append(result+"\n");
         writer.close();
         } catch (IOException e) {

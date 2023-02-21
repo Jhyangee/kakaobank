@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.kakao.school;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class OpenApiController {
+public class OpenApi {
 
     @GetMapping("/jsonapi/element")
     public void elementJson() {
@@ -52,6 +52,7 @@ public class OpenApiController {
     public void  uniJson() {
         try {
             //대학교
+            //**에러사항 발행을 위해 대학교 api 호출시 에러발생으로 로컬 파일에서 읽어오도록 설계
             String  apiUrl = "http://api.data.go.kr/openapi/tn_pubr_public_univ_info_api" +
                     "/89XyGNdysmxd%2BvNnCKTqDTWKDbLgY35d1I7a%2BVJHeiHx%2BEfAaP2C5DWLP%2F9KLziiqPX8QT5GRc3GiEHvon8I4g%3D%3D";
              JsonParsing.CallAPI(apiUrl);

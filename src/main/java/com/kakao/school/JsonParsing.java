@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.kakao.school;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -46,6 +46,7 @@ public class JsonParsing {
             }
             SchoolCount.ApiCount(schllist);
         } catch (IOException e) {
+            //**에러사항 발행을 위해 대학교 api 호출시 에러발생
             //1. runtimeException처리
             //  throw new RuntimeException(e);
             //2.로컬에서 파일 긁어오기

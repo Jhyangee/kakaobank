@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.kakao.school;
 
 import org.springframework.util.ResourceUtils;
 import java.io.*;
@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CsvRead{
+public class CsvRead {
 
     public static String csvRead() throws IOException {
         File file = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX + "comments.csv");
