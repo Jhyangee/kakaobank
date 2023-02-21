@@ -6,10 +6,10 @@ import java.util.List;
 
 public class SchoolCount {
 
-    public static  void ApiCount(List<String> schl_list ){
+    public static  void ApiCount(List<String> schllist ){
         try {
-            String text = FileReadUsingSpring.FileRead();
-            for (String str :schl_list){
+            String text = CsvRead.csvRead();
+            for (String str :schllist){
                 ArrayList a_list = new ArrayList();
                 if(text.contains(str)) {
                     for(int i=0; i<text.length(); i++) {
@@ -29,7 +29,7 @@ public class SchoolCount {
                         }
                     }
                     String result = str +":"+cnt;
-                    FileCreate.ResultFIleWrite(result);
+                    ResultFile.ResultFIleWrite(result);
                 }
             }
         }catch (IOException e){
@@ -40,8 +40,8 @@ public class SchoolCount {
 
     public static void localUnicount(){
         try {
-            String text = FileReadUsingSpring.FileRead();
-            List<String> uni_name = FileReadUsingSpring.UniFileRead();
+            String text = CsvRead.csvRead();
+            List<String> uni_name = CsvRead.uniCsvRead();
             for (String str :uni_name){
                 ArrayList a_list = new ArrayList();
                 if(text.contains(str)) {
@@ -62,7 +62,7 @@ public class SchoolCount {
                         }
                     }
                     String result = str +":"+cnt;
-                    FileCreate.ResultFIleWrite(result);
+                    ResultFile.ResultFIleWrite(result);
                 }
             }
         }catch (IOException e){

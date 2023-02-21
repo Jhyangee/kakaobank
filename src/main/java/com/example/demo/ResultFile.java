@@ -8,14 +8,14 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+public class ResultFile {
 
-public class FileCreate {
-
-    private static final Logger logger = LoggerFactory.getLogger(FileCreate.class);
+    private static final Logger logger = LoggerFactory.getLogger(ResultFile.class);
 
     public static void ResultFileCreate(){
         try {
-            logger.info("파일신규생성시작");
+
+            logger.info("======파일신규생성시작==========");
         File file = new File(ResourceUtils.CLASSPATH_URL_PREFIX + "result.text");
 
         if (!file.exists()) {

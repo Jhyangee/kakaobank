@@ -14,8 +14,7 @@ import java.util.List;
 
 public class JsonParsing {
 
-
-    public static List<String> CallAPI(String apiUrl)  {
+    public static void CallAPI(String apiUrl)  {
         StringBuffer result = new StringBuffer();
         String jsonString = null;
         List<String> schllist = new ArrayList<>();
@@ -40,11 +39,11 @@ public class JsonParsing {
                 String schl_Nm = (String) rows.get("SCHUL_NM");
                 schllist.add(schl_Nm);
             }
+            SchoolCount.ApiCount(schllist);
         } catch (IOException e) {
             //throw nw RuntimeException(e);
             //로컬에서 파일 긁어오기
             SchoolCount.localUnicount();
         }
-        return schllist;
     }
 }

@@ -6,9 +6,9 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileReadUsingSpring {
+public class CsvRead{
 
-    public static String FileRead() throws IOException {
+    public static String csvRead() throws IOException {
         File file = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX + "comments.csv");
         List<String> lines = Files.readAllLines(file.toPath());
         String text = lines.toString();
@@ -16,7 +16,7 @@ public class FileReadUsingSpring {
        return text;
     }
 
-    public static List<String> UniFileRead() throws IOException {
+    public static List<String> uniCsvRead() throws IOException {
         File file = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX + "uni_name.csv");
         List<String> lines = Files.readAllLines(file.toPath());
         List<String> unilist = new ArrayList<>();
