@@ -14,7 +14,10 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class JsonParsing {
+    private static final Logger logger = LoggerFactory.getLogger(ResultFile.class);
 
     public static void CallAPI(String apiUrl)  {
         StringBuffer result = new StringBuffer();
