@@ -3,6 +3,8 @@ package com.example.demo;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.XML;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -41,9 +43,10 @@ public class JsonParsing {
             }
             SchoolCount.ApiCount(schllist);
         } catch (IOException e) {
-            //throw nw RuntimeException(e);
-            //로컬에서 파일 긁어오기
-            SchoolCount.localUnicount();
+            //1. runtimeException처리
+            //  throw new RuntimeException(e);
+            //2.로컬에서 파일 긁어오기
+             SchoolCount.localCount();
         }
     }
 }

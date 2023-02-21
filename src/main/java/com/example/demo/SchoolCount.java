@@ -38,7 +38,7 @@ public class SchoolCount {
     }
 
 
-    public static void localUnicount(){
+    public static void localCount(){
         try {
             String text = CsvRead.csvRead();
             List<String> uni_name = CsvRead.uniCsvRead();
